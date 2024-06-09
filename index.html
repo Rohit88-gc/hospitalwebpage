@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthNexus</title>
+    <link rel="stylesheet" href="hospital.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <style>
+        /* Smooth Scroll for Back to Top Button */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>HealthNexus</h1>
+            </div>
+            <i id="bar" class="fa-solid fa-bars"></i>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#doctor">Doctors</a></li>
+                <li><a href="#speciality">Specialities</a></li>
+                <li><a href="#patient">Patient Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="main" id="home">
+            <div class="mainText">
+                <h1>The Hospital that <br> Cares for You</h1>
+                <h3>Best Teams</h3>
+                <button id="showMoreBtn">Show more</button>
+            </div>
+            <img src="mains.png" alt="Main Image">
+        </div>
+
+        <div id="doctor">
+            <div class="head">
+                <h1>Our Doctors</h1>
+            </div>
+            <div class="teams">
+                <div class="card" data-doctor="1">
+                    <img src="d1.jpg" alt="Doctor 1">
+                    <p>Vipin Kulkarni</p>
+                    <p>Neurologist</p>
+                </div>
+                <div class="card" data-doctor="2">
+                    <img src="d22.jpeg" alt="Doctor 2">
+                    <p>Rohan Gupta</p>
+                    <p>Cardiologist</p>
+                </div>
+                <div class="card" data-doctor="3">
+                    <img src="d10.jpeg" alt="Doctor 3">
+                    <p>Anjali Sharma</p>
+                    <p>Dentist</p>
+                </div>
+            </div>
+
+            <div class="detail">
+                <button class="closeBtn">X</button>
+                <div class="content">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div id="speciality">
+            <div class="head">
+                <h1>Our Specialities</h1>
+            </div>
+            <div class="speciality">
+                <div class="spCard">
+                    <img src="brain.jpeg" alt="Speciality 1">
+                    <p>Neurology</p>
+                    <p>Neurology focuses on diagnosing and treating disorders of the nervous system, which includes the
+                        brain, spinal cord, and peripheral nerves. Common neurological conditions include stroke,
+                        multiple sclerosis, epilepsy, Parkinson's disease, and Alzheimer's disease. Treatments in
+                        neurology can range from medication management to complex neurosurgical procedures, aimed at
+                        restoring function and improving the quality of life for patients affected by neurological
+                        disorders.</p>
+                </div>
+                <div class="spCard">
+                    <img src="heart.jpeg" alt="Speciality 2">
+                    <p>Cardiology</p>
+                    <p>Cardiology is a branch of medicine that deals with the disorders of the heart as well as some
+                        parts of the circulatory system. The field includes medical diagnosis and treatment of
+                        congenital heart defects, coronary artery disease, heart failure, valvular heart disease, and
+                        electrophysiology. Cardiologists ensure the heart health of patients and guide them through
+                        prevention and management of heart-related conditions.</p>
+                </div>
+                <div class="spCard">
+                    <img src="teeth.jpeg" alt="Speciality 3">
+                    <p>Dentist</p>
+                    <p>Dentistry is focused on the diagnosis, prevention, and treatment of diseases and conditions of
+                        the
+                        oral cavity and surrounding structures. It also includes the maintenance of the health of the
+                        teeth, gums, and other oral tissues. Services range from routine cleanings and fillings to more
+                        complex procedures such as root canals, crowns, and orthodontics.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="patient">
+            <div class="head">
+                <h1>Patient Reviews</h1>
+            </div>
+            <div class="reviews">
+                <div class="patientReview">
+                    <img src="p1.png" alt="Patient 1">
+                    <p>"Great service and friendly staff!"</p>
+                    <p>- Patient A</p>
+                </div>
+                <div class="patientReview">
+                    <img src="p2.png" alt="Patient 2">
+                    <p>"The doctors are very professional."</p>
+                    <p>- Patient B</p>
+                </div>
+                <div class="patientReview">
+                    <img src="p3.jpg" alt="Patient 3">
+                    <p>"Highly recommend this hospital."</p>
+                    <p>- Patient C</p>
+                </div>
+                <div class="patientReview">
+                    <img src="p4.jpg" alt="Patient 4">
+                    <p>"Amazing care and facilities."</p>
+                    <p>- Patient D</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="head">
+                <h1>Get in Touch</h1>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Enter Your Name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" placeholder="Enter Your Email" required>
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" placeholder="Enter Subject of Inquiry">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
+
+                    <div class="buttons">
+                        <button type="submit" id="sendBtn">Send Message</button>
+                        <button type="button" id="findLocationBtn">Find a Location</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="text">
+                <h3>About Us</h3>
+                <h4>
+                    <p>24 Hours</p>
+                    <p>Top Doctor</p>
+                    <p>Best Care</p>
+                    <p>Patient</p>
+                </h4>
+            </div>
+            <div class="text">
+                <h3>Speciality</h3>
+                <h4>
+                    <p>Knee surgery</p>
+                    <p>Spin surgery</p>
+                    <p>Leg surgery</p>
+                    <p>Tendon surgery</p>
+                </h4>
+            </div>
+            <div class="text">
+                <h3>Best Teams</h3>
+                <h4>
+                    <p>Doctors</p>
+                    <p>Nursing</p>
+                    <p>Staff</p>
+                    <p>Hospital</p>
+                </h4>
+            </div>
+            <div class="text">
+                <h3>Address</h3>
+                <h4>
+                    <p>Near MG Road</p>
+                    <p>Galaxy Care</p>
+                    <p>333-09093</p>
+                    <p>09-883-090</p>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div id="backToTopBtn">
+        <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+    <script src="hospital.js"></script>
+</body>
+
+</html>
